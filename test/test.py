@@ -44,5 +44,5 @@ class Test(avocado.Test):
             return
 
         for fn in os.listdir(testpath):
-            if fn.endswith('.yml'):
+            if fn.startswith('test_') and fn.endswith('.yml'):
                 self.machine.run_playbook(os.path.join(testpath, fn))
