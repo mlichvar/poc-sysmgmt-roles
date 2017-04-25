@@ -37,8 +37,8 @@ options -u ntp:ntp -g
 
 [phc2sys]
 path /usr/sbin/phc2sys
-options -l 6
+options -l {{ '5' if timesync_log_level < 3 else '6' }}
 
 [ptp4l]
 path /usr/sbin/ptp4l
-options -l 6
+options -l {{ '5' if timesync_log_level < 3 else '6' }}

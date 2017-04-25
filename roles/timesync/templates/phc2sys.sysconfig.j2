@@ -1,3 +1,3 @@
 # {{ ansible_managed }}
 
-OPTIONS="-a -r{{ ' -F ' ~ clock_step_threshold if clock_step_threshold >= 0.0 else '' }}"
+OPTIONS="-a -r -l {{ '5' if timesync_log_level < 2 else '6' }}{{ ' -F ' ~ clock_step_threshold if clock_step_threshold >= 0.0 else '' }}"

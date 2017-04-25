@@ -19,5 +19,6 @@
     clock_step_threshold: 0.001
     dhcp_ntp_servers: no
     min_time_sources: 2
+    timesync_log_level: 3
   roles:
     - timesync

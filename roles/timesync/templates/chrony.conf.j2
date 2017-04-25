@@ -45,3 +45,11 @@ commandkey 1
 generatecommandkey
 
 {% endif %}
+{% if timesync_log_level > 1 %}
+# Specify directory for log files.
+logdir /var/log/chrony
+
+# Select which information is logged.
+log tracking {{ 'statistics measurements refclocks' if timesync_log_level > 2 else '' }}
+
+{% endif %}

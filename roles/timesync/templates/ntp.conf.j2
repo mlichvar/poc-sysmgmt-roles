@@ -34,3 +34,8 @@ tinker step {{ clock_step_threshold }}
 tos minsane {{ min_time_sources }}
 
 {% endif %}
+{% if timesync_log_level > 1 %}
+# Enable writing of statistics records.
+statistics loopstats {{ 'peerstats protostats clockstats' if timesync_log_level > 2 else '' }}
+
+{% endif %}

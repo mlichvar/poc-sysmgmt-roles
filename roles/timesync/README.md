@@ -46,6 +46,11 @@ clock_step_threshold: 1.0
 # Minimum number of selectable time sources required to allow synchronization
 # of the clock (default 1)
 min_time_sources: 1
+
+# Logging level as a number between 1 and 3 (default 1). Higher levels increase
+# the maximum level of messages written to the system log and/or enable other
+# log files specific to the NTP implementation.
+timesync_log_level: 1
 ```
 
 Example Playbook

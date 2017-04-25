@@ -13,3 +13,4 @@ udp_ttl			{{ ptp_domains[0]['udp_ttl'] }}
 {% if not mode2_hwts and clock_step_threshold >= 0.0 %}
 first_step_threshold	{{ clock_step_threshold }}
 {% endif %}
+logging_level		{{ '5' if timesync_log_level < 2 else '6' }}
